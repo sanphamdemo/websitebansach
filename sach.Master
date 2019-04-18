@@ -1,0 +1,105 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="sach.master.cs" Inherits="BaiTapLon.sach" %>
+
+<%@ Register src="Adv.ascx" tagname="Adv" tagprefix="uc1" %>
+
+<%@ Register src="menu.ascx" tagname="menu" tagprefix="uc3" %>
+
+<%@ Register src="ListBook.ascx" tagname="ListBook" tagprefix="uc2" %>
+<%@ Register src="sachmoi.ascx" tagname="sachmoi" tagprefix="uc4" %>
+
+<%@ Register src="sidebar_right.ascx" tagname="sidebar_right" tagprefix="uc5" %>
+
+<%@ Register src="anhquangcao.ascx" tagname="anhquangcao" tagprefix="uc6" %>
+
+<%@ Register src="SanPhamSach.ascx" tagname="SanPhamSach" tagprefix="uc7" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        body{
+            background:pink;
+        }
+        .auto-style2 {
+            height: 407px;
+            width: 221px;
+        }
+        .auto-style3 {
+            width: 221px;
+            height: 58px;
+        }
+        .auto-style4 {
+            height: 88px;
+        }
+        .auto-style5 {
+            height: 51px;
+        }
+        .auto-style7 {
+            height: 120px;
+        }
+        .auto-style8 {
+            width: 564px;
+            height: 51px;
+        }
+        .auto-style10 {
+            width: 568px;
+            height: 407px;
+        }
+
+        .auto-style11 {
+            width: 80%;
+            margin:0px auto;
+        }
+
+        </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table style="border-collapse: collapse;" class="auto-style11">
+            <tr>
+                <td class="auto-style4" colspan="3" style="background-image: url('/images/Nen_banner.jpg'); background-repeat: no-repeat; background-position: left top; width: 760px; height: 96px; background-color: #10A77E; vertical-align: bottom; text-align: right;">
+                    <uc1:Adv ID="Adv1" runat="server" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style5" colspan="3" style="background-color: #00CC00; border-bottom-style: solid; border-bottom-color: #FF6600;">
+                    <uc3:menu ID="menu1" runat="server" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style3" style="background-color: #00CC00; text-align:center; color: #FFFFFF; font-family: sans-serif; font-size: medium; font-weight: bold; font-style: normal;">&nbsp;Chủ đề sách</td>
+                <td class="auto-style3">
+                    <img class="auto-style8" src="images/tittle_sachmoi.gif" /></td>
+                <td rowspan="2" style="width: 15%; vertical-align: top; text-align: left;">
+                    <uc5:sidebar_right ID="sidebar_right1" runat="server" />
+                    <uc6:anhquangcao ID="anhquangcao1" runat="server" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2" style="background-color: #33CCFF; text-align: left; vertical-align: top; width: 20%;">
+                    <uc2:ListBook ID="ListBook1" runat="server" />
+                </td>
+                <td class="auto-style10" style="text-align: left; vertical-align: top; width: 65%;">
+                    <uc4:sachmoi ID="sachmoi1" runat="server" />
+                    <uc1:Adv ID="Adv2" runat="server" />
+                    <br />
+                    <p style="font-size: medium; font-weight: bold">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            <uc7:SanPhamSach ID="SanPhamSach1" runat="server" />
+                        </asp:ContentPlaceHolder>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" class="auto-style7" style="background-color: #00FF00; font-family: sans-serif; color: #FFFFFF; text-align: center;">@2012 - Nhà sách trường Đại học Công nghiệp Việt - Hung<br />
+                    Địa chỉ: 16 Xuân Khanh, Sơn Tây, Hà Nội<br />
+                    ĐT: 0983308081</td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
